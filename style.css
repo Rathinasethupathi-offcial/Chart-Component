@@ -1,0 +1,136 @@
+html, body {
+    background-color: hsl(27, 66%, 92%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+}
+
+.topcontainer, .bottomcontainer {
+    width: 360px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.topcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(10, 79%, 65%);
+    color: #fff;
+    height: 80px;
+}
+
+.image {
+    height: 40px;
+    width: 40px;
+}
+
+.bottomcontainer {
+    background-color: aliceblue;
+    margin-top: 10px;
+}
+
+.bottomcontainer1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomcontainertext, .monthprice, .lastmonth {
+    color: hsl(25, 62%, 27%);
+}
+
+.bars {
+    display: flex;
+    height: 100px;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.height1, .height2, .height3, .height4, .height5, .height6, .height7 {
+    width: 30px;
+    border-radius: 5px 5px 0 0;
+}
+
+.height1, .height2, .height4, .height5, .height6, .height7 {
+    background-color: hsl(10, 79%, 65%);
+}
+
+.height3 {
+    background-color: hsl(186, 34%, 60%);
+}
+
+.height1 { height: 30px; }
+.height2 { height: 40px; }
+.height3 { height: 80px; }
+.height4 { height: 50px; }
+.height5 { height: 40px; }
+.height6 { height: 30px; }
+.height7 { height: 40px; }
+
+.singlebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.days {
+    font-size: 12px;
+    color: #808080;
+}
+
+.monthprice {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.lastmonth {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.mybalance {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+[class^="height"] {
+    position: relative; 
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 35px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    transform: translateX(0%);
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+[class^="height"]:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1; 
+}
