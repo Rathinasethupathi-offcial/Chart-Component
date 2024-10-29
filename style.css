@@ -129,7 +129,6 @@ html, body {
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
-
 [class^="height"]:hover .tooltiptext {
     visibility: visible;
     opacity: 1; 
